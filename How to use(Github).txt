@@ -1,0 +1,34 @@
+Github사용법
+
+＃https://github.com/ 에서 new Repository를 선택한다.
+    Owner : 회원가입할 때의 Username
+    Repository name : 저장소 이름
+    Description : 이 저장소의 부가설명
+    public 체크 : 무료 저장소 사용을 의미
+    Create repository : 저장소가 만들어진다.
+
+＃. 테스트 하기
+  1) 저장소로 쓰일 폴더를 만든다. 
+     'Repositiry name'에 기입했던 이름과 동일하게 하면 구별하기 쉽다.
+  2) cmd 또는 Git Bash를 통해 1)에서 만든 폴더로 이동한다.
+  3) 다음과 같은 명령어를 수행한다.
+    #1. echo "# gitest01" >> README.md : README.md 라는 파일을 만들려고 하는데 이 파일의 내용은 # gitest01 로 할께
+    #2. git init : 현재 너가 지정해준 경로에 git 저장소를 생성할꺼야.
+    #3. git add README.md : README.md 라는 파일을 커밋 영역에 넣어둘 준비상태에 둘꺼야. 
+          작업공간과 저장소 사이의 대기실(index 영역 또는, stage 영역 이라고 부름)에 들어가 있어.
+    #4. git commit -m "first commit" : 지금 대기실(index or stage area)에 있는 녀석들을 커밋장소에 들어가게되는데 
+          지금 first commit 라는 딱지를 달고 커밋장소에 입장하게 되.
+    #5. git remote add origin https://github.com/namgikim/gitest01.git : 
+          이 저장소 (https://github.com/gitest01/gitest01.git)의 별칭을 origin으로 할께. 
+          이걸 Clone(복제)하게 되면 origin 이라는 별칭을 볼 수 있을 꺼야.
+    #6. git push -u origin master : 좋아 커밋상태에 있는 내용들을 원격저장소로 밀어보내줄께!. 
+          다음부턴 그냥 git push 명령어만 입력해도 원격저장소로 이어질수 있게 옵션도 좀 달아줬어!
+ 
+    ※ 출처: http://recoveryman.tistory.com/251 [회복맨 블로그]
+    ※ 중간에 username or email, password 입력창이 나타난다.
+    ※ 4.번에서 Please tell me who you are. 에러가 난다면
+        다음과 같이 name과 email을 설정하고나서 실행한다.(설정 후 3.번부터 다시 진행했다)
+            $ git config user.name "namgikim"
+            $ git config user.email "namgiu9@gmail.com"
+    ※ remote 삭제방법 : git remote rm origin
+[출처] Github 초기 설정|작성자 skarlxldrn
