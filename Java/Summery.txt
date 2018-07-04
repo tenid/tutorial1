@@ -1,0 +1,28 @@
+◆특정한 문자까지 배열에 저장
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] a=sc.nextLine().split("\\."); //입력한 문자열 중에서 .를 만날때까지 문자를 각 배열에 넣음
+        int year=Integer.parseInt(a[0]);
+        int month=Integer.parseInt(a[1]);
+        int day=Integer.parseInt(a[2]);
+        
+        System.out.printf("%02d-%02d-%04d",day,month,year);
+        
+     }
+}
+◆Math 클래스
+pi를 사용할 경우 Math.PI
+cos를 사용할 경우 Math.cos()
+sin를 사용할 경우 Math.sin() // Math.sin(pi*0.5)=1 
+
+◆랜덤 함수 사용법
+Math.random()를 그냥 사용하면 0<Math.random()<1의 유리수가 출력
+
+(int)( Math.random()*범위 + 시작값) 
+
+ 
